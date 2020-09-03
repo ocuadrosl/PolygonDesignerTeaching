@@ -5,18 +5,19 @@
 #include <vector>
 #include <cmath>
 #include <iostream>
+#include <memory>
 
 class Polygon
 {
 
-    using  PointsType = std::vector<QPoint>;
+    using  PointsType = std::vector<std::shared_ptr<QPoint>>;
     const float PI = 3.14f;
 
 public:
     Polygon();
     void SetProperties(unsigned radius, unsigned sides, const QPoint& center);
     void Compute();
-    PointsType GetPoints() const;
+    const PointsType& GetPoints() const;
 
 
 private:

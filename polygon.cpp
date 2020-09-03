@@ -2,7 +2,7 @@
 
 Polygon::Polygon()
 {
-
+    std::cout<<"created"<<std::endl;
 }
 
 
@@ -14,7 +14,7 @@ void Polygon::SetProperties(unsigned radius, unsigned sides, const QPoint& cente
     Center = center;
 }
 
-Polygon::PointsType Polygon::GetPoints() const
+const Polygon::PointsType& Polygon::GetPoints() const
 {
     return Points;
 }
@@ -30,10 +30,7 @@ void Polygon::Compute()
 
         int x = Center.x() + Radius*std::cos(t);
         int y = Center.y() + Radius*std::sin(t);
-
-        //std::cout<<x<<", "<<y<<std::endl;
-
-        Points.push_back(QPoint(x,y));
+        Points.push_back(std::make_shared<QPoint>(x,y));
     }
 
 }

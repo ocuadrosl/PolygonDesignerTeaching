@@ -24,7 +24,7 @@ class Canvas : public QWidget
     //Qt macro
     Q_OBJECT
 
-    using PointsType = std::vector<QPoint>;
+    using PointsType = std::vector<std::shared_ptr<QPoint>>;
 public:
     explicit Canvas(QWidget *parent = nullptr);
     ~Canvas();

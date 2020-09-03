@@ -23,10 +23,10 @@ void MainWindow::on_DrawPushButton_clicked()
     //computing polygon points!!!!
 
     QPoint center(ui->CanvasWidget->size().width()/2, ui->CanvasWidget->size().height()/2);
-    polygon.SetProperties(ui->RadiusSpinBox->value(), ui->SidesSpinBox->value(), center);
+    polygon->SetProperties(ui->RadiusSpinBox->value(), ui->SidesSpinBox->value(), center);
 
-    polygon.Compute();
-    ui->CanvasWidget->SetPoints(polygon.GetPoints());
+    polygon->Compute();
+    ui->CanvasWidget->SetPoints(polygon->GetPoints());
 
     ui->CanvasWidget->repaint();
 

@@ -29,6 +29,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Polygon polygon;
+    std::unique_ptr<Polygon> polygon  = std::make_unique<Polygon>();
 };
 #endif // MAINWINDOW_H

@@ -37,10 +37,10 @@ void Canvas::paintEvent(QPaintEvent *)
     for(auto point = Points.begin(); point != Points.end()-1; ++point)
     {
         //draw a line
-        painter->drawLine(*point, *(point+1));
+        painter->drawLine(**point, **(point+1));
     }
 
-    painter->drawLine(*Points.begin(), *Points.rbegin());
+    painter->drawLine(**Points.begin(), **Points.rbegin());
 
 
 }
