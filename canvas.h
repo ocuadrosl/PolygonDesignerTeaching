@@ -6,7 +6,7 @@
 #include <QPoint>
 
 #include <memory>
-
+/*
 #include <vtkGenericOpenGLRenderWindow.h>
 #include <vtkNamedColors.h>
 #include <vtkNew.h>
@@ -14,7 +14,7 @@
 
 #include <QVTKOpenGLNativeWidget.h>
 #include <QSurfaceFormat>
-
+*/
 namespace Ui {
 class Canvas;
 }

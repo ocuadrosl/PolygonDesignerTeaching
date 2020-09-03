@@ -12,8 +12,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-find_package(VTK REQUIRED)
-include(${VTK_USE_FILE})
+#find_package(VTK REQUIRED)
+#include(${VTK_USE_FILE})
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
@@ -33,4 +33,4 @@ add_executable(PolygonDesignerTeaching
 
 
 target_link_libraries(PolygonDesignerTeaching  Qt${QT_VERSION_MAJOR}::Widgets)
-target_link_libraries(PolygonDesignerTeaching ${VTK_LIBRARIES})
+#target_link_libraries(PolygonDesignerTeaching ${VTK_LIBRARIES})
